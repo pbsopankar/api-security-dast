@@ -1,0 +1,28 @@
+# Default Configuration for API Security DAST
+
+# Timeouts
+timeouts:
+  request_timeout: 30   # in seconds
+  connect_timeout: 10    # in seconds
+
+# Headers
+headers:
+  User-Agent: my-api-client
+  Accept: application/json
+
+# Authentication
+authentication:
+  type: "Bearer"
+  token: "YOUR_TOKEN_HERE"
+
+# Payload Options
+payload:
+  max_size: 1048576  # in bytes (1 MB)
+  format: "json"
+
+# Reporting Preferences
+reporting:
+  enabled: true
+  output_path: "reports/"
+  format: "html"
+  notify_on_failure: true
