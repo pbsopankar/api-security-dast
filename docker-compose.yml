@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  api-service:
+    image: <your-api-service-image>
+    ports:
+      - "8080:8080"
+    networks:
+      - api-network
+
+  dast-scanner:
+    image: <your-dast-scanner-image>
+    depends_on:
+      - api-service
+    networks:
+      - api-network
+
+networks:
+  api-network:
+    driver: bridge
