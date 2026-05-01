@@ -1,0 +1,23 @@
+# Sample API Configuration for Scanning
+
+# This is an example configuration file for scanning a sample API.
+
+api:
+  name: Sample API
+  url: https://api.sample.com
+
+# Scanning configuration
+scan:
+  enabled: true
+  timeout: 10
+  retries: 3
+
+# Authentication settings
+auth:
+  type: bearer
+  token: YOUR_TOKEN_HERE
+
+# Additional options
+options:
+  followRedirects: true
+  ignoreSSL: false
